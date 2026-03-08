@@ -1,0 +1,101 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff7e6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2.5rem;
+    color: #d6336c;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Поля ввода */
+input[type="text"], select {
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 2px solid border-radius 12px;
+    outline:none transition all 0.3s ease;
+    width: 200px;
+    text-align: center;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #d6336c;
+    box-shadow: 0 0 10px rgba(214, 51, 108, 0.3);
+}
+
+/* Кнопка */
+button {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #d6336c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Блок результата */
+#output {
+    margin-top: 40px;
+    padding: 20px 30px;
+    background: #fff0f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    text-align: center;
+    min-width: 250px;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+/* Анимация появления */
+#output.show {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #fc00c5;
+    opacity: 0.8;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
+
+/* Анимация падения */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
